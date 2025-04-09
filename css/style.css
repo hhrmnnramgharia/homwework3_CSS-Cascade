@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    background-image: url('https://images.unsplash.com/photo-1506748686218-fcb2a3c99bba'); /* Soft background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #b0b0b0;  /* Muted gray text */
+    padding: 2rem;
+    min-height: 100vh;
+  }
+  
+  #page-title {
+    text-align: center;
+    font-size: 3rem;
+    color: #d0d0d0; /* Light gray */
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #c5c5c5; /* Slightly darker gray */
+  }
+  
+  ul {
+    list-style-type: none;
+    margin-bottom: 2rem;
+  }
+  
+  li {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.15);  /* Light translucent white background */
+    border-radius: 10px;
+    transition: background 0.3s ease;
+  }
+  
+  li:hover {
+    background: rgba(255, 255, 255, 0.25);  /* Slight change on hover */
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2); /* Slightly larger checkbox */
+  }
+  
+  label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  /* To Do behavior */
+  .to-do input:checked + span {
+    color: #9e9e9e;  /* Muted gray for completed tasks */
+    font-weight: normal;
+    text-decoration: line-through;  /* Line-through for completed tasks */
+  }
+  
+  .to-do input:checked + span::after {
+    content: ' ✅';
+    margin-left: 10px;
+    font-size: 1.2rem;
+  }
+  
+  /* In Progress behavior */
+  .in-progress input:checked + span {
+    color: #9e9e9e;
+    font-weight: normal;
+    text-decoration: line-through;
+  }
+  
+  .in-progress input:checked + span::after {
+    content: ' ✅';
+    margin-left: 10px;
+    font-size: 1.2rem;
+  }
+  
+  /* Done behavior */
+  .done input:checked + span {
+    color: #757575;  /* Even duller gray for 'done' items */
+    text-decoration: line-through;
+  }
+  
+  .done input:checked + span::after {
+    content: ' ✓';
+    margin-left: 10px;
+    font-size: 1.3rem;
+  }
